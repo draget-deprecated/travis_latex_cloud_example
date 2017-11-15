@@ -35,6 +35,6 @@ The deploy step uses the environment variable `$NCPW` which is hidden in the log
 ### Setting up TravisCI
 Log into TravisCI.org with your GitHub account and enable it for the repository you want to build. Go to the repository settings, add an environment variable called `$NCPW` and make sure 'Display value in build log' is off.
 
-Add and edit `.travis.yml.full` to your liking a commit it.
+Add and edit `.travis.yml.full` to your liking and commit it.
 
 Enjoy!
