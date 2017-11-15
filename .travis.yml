@@ -1,0 +1,11 @@
+# TravisCI container based setup
+script:
+  - cd .
+  - latexmk -pdf -f -latexoption="--interaction=nonstopmode"
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: curl --user "draget_buildbot:$NCPW" -T *.pdf https://cloud.foss-ag.de/remote.php/webdav/draget_buildbot/example/
+addons:
+  apt:
+    packages: [texlive, latexmk]

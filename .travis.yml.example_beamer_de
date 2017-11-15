@@ -1,0 +1,19 @@
+# This is an example for a project where the TeX documentation:
+#   - is in a subdirectory called 'doc'
+#   - consists of a report.tex and slides.tex
+#   - other included .tex files are in a subdirectory below that
+#   - is written using LaTex beamer + german
+
+script:
+  - cd doc
+  - latexmk -pdf -f -latexoption="--interaction=nonstopmode"
+after_success:
+  - mv report.pdf exampleproject_final_report.pdf
+  - mv slides.pdf exampleproject_slides.pdf
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: curl --user "ncuser:$NCPW" -T *.pdf https://cloud.yoursite.de/remote.php/webdav/ncuser/targetdir/
+addons:
+  apt:
+    packages: [texlive, latexmk, latex-beamer, texlive-lang-german]
