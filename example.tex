@@ -1,0 +1,27 @@
+\documentclass[a4paper]{article}
+
+\usepackage{pdfpages}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\title{Example Document}
+\author{Draget\\draget@speciesm.net}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{About}
+This is a very simple TeX document. It does not use many TeX packages and is easy to build.
+
+\section{The GitHub README.md}
+\lstinputlisting[breaklines]{README.md}
+
+\section{Lore Ipsum Text}
+\input{include/loreipsum}
+
+\end{document}
