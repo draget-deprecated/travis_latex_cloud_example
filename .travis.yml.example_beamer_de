@@ -13,7 +13,7 @@ after_success:
 deploy:
   skip_cleanup: true
   provider: script
-  script: curl --user "ncuser:$NCPW" -T *.pdf https://cloud.yoursite.de/remote.php/webdav/ncuser/targetdir/
+  script: curl --user "ncuser:$NCPW" -T *.pdf https://cloud.yoursite.de/remote.php/webdav/targetdir/
 addons:
   apt:
     packages: [texlive, latexmk, latex-beamer, texlive-lang-german]

@@ -5,7 +5,7 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: curl --user "draget_buildbot:$NCPW" -T *.pdf https://cloud.foss-ag.de/remote.php/webdav/draget_buildbot/example/
+  script: curl --user "draget_buildbot:$NCPW" -T *.pdf https://cloud.foss-ag.de/remote.php/webdav/example
 addons:
   apt:
     packages: [texlive, latexmk]

@@ -15,7 +15,7 @@ after_success:
 deploy:
   skip_cleanup: true
   provider: script
-  script: curl --user "travis_buildbot:$NCPW" -T *.pdf https://cloud.yoursite.de/remote.php/webdav/travis_buildbot/
+  script: curl --user "travis_buildbot:$NCPW" -T *.pdf https://cloud.yoursite.de/remote.php/webdav/
 
 # required packages. texlive only installs basic packages. To get all, use texlive-full (increases build-time to over 15m!)
 addons:
