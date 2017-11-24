@@ -1,6 +1,7 @@
 # Use the TravisCI container based setup which starts in less than 10s
 # It is the default environment, so the following line can be skipped
 sudo: false
+language: generic
 
 # the build step
 script:

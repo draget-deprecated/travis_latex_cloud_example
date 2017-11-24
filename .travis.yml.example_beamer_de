@@ -4,6 +4,7 @@
 #   - other included .tex files are in a subdirectory below that
 #   - is written using LaTex beamer + german
 
+language: generic
 script:
   - cd doc
   - latexmk -pdf -f -latexoption="--interaction=nonstopmode"
