@@ -1,5 +1,6 @@
 # TravisCI container based setup
 
+language: shell
 script:
   - cd .
   - latexmk -pdf -f -latexoption="--interaction=nonstopmode"
