@@ -1,6 +1,14 @@
 # TravisCI + LaTeX
 ## (using latexmk, container and deploying to Nextcloud)
 
+---
+**NOTE**
+
+This repository is no longer maintained.
+
+---
+
+
 This is an example on how to use TravisCI.org to automatically build LaTeX documentation and upload it via WebDAV to a Nextcloud server.
 
 The `.travis.yml` is the minimal config files used for this repository. The resulting PDF file can be found [here](https://cloud.foss-ag.de/index.php/s/U4Czc661GOZBYOG)!
